@@ -1,0 +1,13 @@
+.Nav{
+    background-color: #f6f6f6;;
+    height: 8vh;
+    justify-content: flex-end;
+    right: 0;
+}
+.NavLink{
+    margin: 10px;
+    font-size: 16px;
+}
+.NavLinks.active {
+    display: block; 
+  }
