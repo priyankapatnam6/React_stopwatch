@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { Button } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -55,17 +55,21 @@ function App() {
 
   return (
     <div className="App">
-      <h1>STOP WATCH USING REACT</h1>
-     
-<div className='content'>
-<h2>{elapsedTime} seconds</h2> 
+     <h1>STOP WATCH USING REACT</h1>
+      <div className='container'>
+      <h2 >{elapsedTime} seconds</h2>
+
+      <div className='content'>
 
 <Button size='small' onClick={handleStart} variant='contained'>START</Button> &nbsp;
 <Button size='small' onClick={handleStop} variant='contained'>STOP</Button>&nbsp;
 <Button size="small" onClick={handlePause} variant="contained" disabled={paused || !running}>PAUSE</Button> &nbsp;
-        <Button size="small" onClick={handleResume} variant="contained" disabled={!paused}>RESUME</Button> &nbsp;
-        <Button size="small" onClick={handleRestart} variant="contained">RESET</Button>
+<Button size="small" onClick={handleResume} variant="contained" disabled={!paused}>RESUME</Button> &nbsp;
+<Button size="small" onClick={handleRestart} variant="contained">RESET</Button>
 </div>
+      </div>
+
+     
     </div>
   );
 }
